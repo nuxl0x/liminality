@@ -1,9 +1,8 @@
 # Liminality
+Liminality is a mod that adds a variety of distinct liminal spaces to your game.
 
-## Setup
+Find or create a rift between the two sides, and enjoy exploring the spaces which await you.
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+**Credits:**
+- Callumari / Project Designer
+- nuxlox / Programmer
