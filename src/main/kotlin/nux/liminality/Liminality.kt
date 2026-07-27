@@ -3,6 +3,7 @@ package nux.liminality
 import net.fabricmc.api.ModInitializer
 import net.minecraft.util.Identifier
 import nux.liminality.item.UtilityItems
+import nux.liminality.util.BlockHelper
 import nux.liminality.util.ItemHelper
 import org.slf4j.LoggerFactory
 
@@ -14,6 +15,7 @@ object Liminality : ModInitializer {
 	override fun onInitialize() {
 		LOGGER.info("[$MOD_ID] Maybe we don't have to change...")
 		ItemHelper.registerItems()
+		BlockHelper.registerBlocks()
 	}
 
 }
