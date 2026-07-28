@@ -26,6 +26,7 @@ loom {
 			sourceSet(sourceSets.getByName("client"))
 		}
 	}
+
 }
 
 fabricApi {

@@ -8,6 +8,8 @@ import net.minecraft.registry.Registry
 interface BlockRegistrator {
     val blocks: List<BlockEntry>
 
+    fun get(path: String): BlockEntry = blocks.first { it.id.path == path }
+
     fun register() {
         blocks.forEach { block ->
             Registry.register(
