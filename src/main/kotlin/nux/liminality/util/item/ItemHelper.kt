@@ -1,4 +1,4 @@
-package nux.liminality.util
+package nux.liminality.util.item
 
 import nux.liminality.item.UtilityItems
 

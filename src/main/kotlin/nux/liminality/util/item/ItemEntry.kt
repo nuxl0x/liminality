@@ -1,8 +1,9 @@
-package nux.liminality.util
+package nux.liminality.util.item
 
 import net.minecraft.data.client.Model
 import net.minecraft.item.Item
 import net.minecraft.util.Identifier
+import nux.liminality.util.asId
 
 data class ItemEntry(
     val id: Identifier,

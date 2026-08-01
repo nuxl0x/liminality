@@ -1,4 +1,4 @@
-package nux.liminality.util
+package nux.liminality.util.item
 
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry

@@ -1,4 +1,4 @@
-package nux.liminality.util
+package nux.liminality.util.block
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.BlockItem

@@ -1,8 +1,9 @@
-package nux.liminality.util
+package nux.liminality.util.block
 
 import net.minecraft.block.Block
 import net.minecraft.data.client.BlockStateModelGenerator
 import net.minecraft.util.Identifier
+import nux.liminality.util.asId
 
 data class BlockEntry(
     val id: Identifier,

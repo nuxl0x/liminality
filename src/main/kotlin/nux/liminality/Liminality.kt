@@ -1,10 +1,9 @@
 package nux.liminality
 
 import net.fabricmc.api.ModInitializer
-import net.minecraft.util.Identifier
-import nux.liminality.item.UtilityItems
-import nux.liminality.util.BlockHelper
-import nux.liminality.util.ItemHelper
+import nux.liminality.util.block.BlockHelper
+import nux.liminality.util.item.ItemHelper
+import nux.liminality.world.Dimensions
 import org.slf4j.LoggerFactory
 
 object Liminality : ModInitializer {
@@ -16,6 +15,7 @@ object Liminality : ModInitializer {
 		LOGGER.info("[$MOD_ID] Maybe we don't have to change...")
 		ItemHelper.registerItems()
 		BlockHelper.registerBlocks()
+		Dimensions.register()
 	}
 
 }
