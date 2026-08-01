@@ -2,6 +2,7 @@ package nux.liminality
 
 import net.fabricmc.api.ModInitializer
 import nux.liminality.util.block.BlockHelper
+import nux.liminality.util.effect.EffectHelper
 import nux.liminality.util.item.ItemHelper
 import nux.liminality.world.Dimensions
 import org.slf4j.LoggerFactory
@@ -15,6 +16,7 @@ object Liminality : ModInitializer {
 		LOGGER.info("[$MOD_ID] Maybe we don't have to change...")
 		ItemHelper.registerItems()
 		BlockHelper.registerBlocks()
+		EffectHelper.registerEffects()
 		Dimensions.register()
 	}
 
