@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
 object TeleportationHandler {
-    fun safeTeleportToBackrooms(
+    fun safeTeleport(
         player: ServerPlayerEntity,
         targetWorldKey: RegistryKey<World>,
         targetX: Double,

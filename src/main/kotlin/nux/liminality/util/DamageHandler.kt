@@ -2,6 +2,8 @@ package nux.liminality.util
 
 import net.minecraft.entity.damage.DamageSource
 import net.minecraft.entity.damage.DamageTypes
+import net.minecraft.registry.RegistryKey
+import net.minecraft.registry.RegistryKeys
 import net.minecraft.registry.tag.DamageTypeTags
 import net.minecraft.server.network.ServerPlayerEntity
 import nux.liminality.effect.NegativeEffects
@@ -11,11 +13,11 @@ object DamageHandler {
 
     fun handlePlayerDamage(player: ServerPlayerEntity, source: DamageSource, amount: Float): Boolean {
         val clipBoolean = source.isIn(DamageTypeTags.IS_FALL) // 0.5% Chance
-                && source.isOf(DamageTypes.IN_WALL) // 5% Chance
-                && source.isOf(DamageTypes.CRAMMING) // 50% Chance
-                && source.isOf(DamageTypes.BAD_RESPAWN_POINT) // 2.5% Chance
-                && source.isOf(DamageTypes.OUT_OF_WORLD) // 10% Chance
-                && source.isOf(DamageTypes.FALLING_ANVIL) // 75% Chance
+                || source.isOf(DamageTypes.IN_WALL) // 5% Chance
+                || source.isOf(DamageTypes.CRAMMING) // 50% Chance
+                || source.isOf(DamageTypes.BAD_RESPAWN_POINT) // 2.5% Chance
+                || source.isOf(DamageTypes.OUT_OF_WORLD) // 10% Chance
+                || source.isOf(DamageTypes.FALLING_ANVIL) // 75% Chance
 
         if (!clipBoolean) return false
         if (player.hasStatusEffect(PositiveEffects.get("stability").effect)) return false
@@ -36,7 +38,8 @@ object DamageHandler {
 
         if (!shouldTeleport) return false
 
-
+        val levelZeroKey = RegistryKey.of(RegistryKeys.WORLD, "level_zero".asId())
+        TeleportationHandler.safeTeleport(player, levelZeroKey, player.x, 100, player.z)
 
         return true
     }

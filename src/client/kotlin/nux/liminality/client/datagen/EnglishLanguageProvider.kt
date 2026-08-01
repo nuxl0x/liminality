@@ -28,5 +28,11 @@ class EnglishLanguageProvider(output: FabricDataOutput) : FabricLanguageProvider
             translationBuilder.add(item, name)
         }
 
+        EnglishLanguageMaps.getMaps().forEach {
+            it.forEach { (key, value) ->
+                translationBuilder.add(key, value)
+            }
+        }
+
     }
 }
